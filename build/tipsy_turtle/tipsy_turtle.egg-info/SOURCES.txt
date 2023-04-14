@@ -13,6 +13,7 @@ tipsy_turtle/__init__.py
 tipsy_turtle/my_first_node.py
 tipsy_turtle/pose_subscriber.py
 tipsy_turtle/sim_circle.py
+tipsy_turtle/turtle_controller.py
 tipsy_turtle.egg-info/PKG-INFO
 tipsy_turtle.egg-info/SOURCES.txt
 tipsy_turtle.egg-info/dependency_links.txt

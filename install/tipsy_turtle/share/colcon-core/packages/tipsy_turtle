@@ -1,1 +1,1 @@
-geometry_msgs:rclpy:turtlesim
+geometry_msgs:nav_msgs:rclpy:turtlebot4_navigation:turtlesim
