@@ -1,0 +1,31 @@
+running egg_info
+creating ../../build/tipsy_turtle/tipsy_turtle.egg-info
+writing ../../build/tipsy_turtle/tipsy_turtle.egg-info/PKG-INFO
+writing dependency_links to ../../build/tipsy_turtle/tipsy_turtle.egg-info/dependency_links.txt
+writing entry points to ../../build/tipsy_turtle/tipsy_turtle.egg-info/entry_points.txt
+writing requirements to ../../build/tipsy_turtle/tipsy_turtle.egg-info/requires.txt
+writing top-level names to ../../build/tipsy_turtle/tipsy_turtle.egg-info/top_level.txt
+writing manifest file '../../build/tipsy_turtle/tipsy_turtle.egg-info/SOURCES.txt'
+reading manifest file '../../build/tipsy_turtle/tipsy_turtle.egg-info/SOURCES.txt'
+writing manifest file '../../build/tipsy_turtle/tipsy_turtle.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/syqua/Desktop/ros2_ws/build/tipsy_turtle/build
+creating /home/syqua/Desktop/ros2_ws/build/tipsy_turtle/build/lib
+creating /home/syqua/Desktop/ros2_ws/build/tipsy_turtle/build/lib/tipsy_turtle
+copying tipsy_turtle/__init__.py -> /home/syqua/Desktop/ros2_ws/build/tipsy_turtle/build/lib/tipsy_turtle
+running install
+running install_lib
+creating /home/syqua/Desktop/ros2_ws/install/tipsy_turtle/lib/python3.8/site-packages/tipsy_turtle
+copying /home/syqua/Desktop/ros2_ws/build/tipsy_turtle/build/lib/tipsy_turtle/__init__.py -> /home/syqua/Desktop/ros2_ws/install/tipsy_turtle/lib/python3.8/site-packages/tipsy_turtle
+byte-compiling /home/syqua/Desktop/ros2_ws/install/tipsy_turtle/lib/python3.8/site-packages/tipsy_turtle/__init__.py to __init__.cpython-38.pyc
+running install_data
+creating /home/syqua/Desktop/ros2_ws/install/tipsy_turtle/share/ament_index
+creating /home/syqua/Desktop/ros2_ws/install/tipsy_turtle/share/ament_index/resource_index
+creating /home/syqua/Desktop/ros2_ws/install/tipsy_turtle/share/ament_index/resource_index/packages
+copying resource/tipsy_turtle -> /home/syqua/Desktop/ros2_ws/install/tipsy_turtle/share/ament_index/resource_index/packages
+copying package.xml -> /home/syqua/Desktop/ros2_ws/install/tipsy_turtle/share/tipsy_turtle
+running install_egg_info
+Copying ../../build/tipsy_turtle/tipsy_turtle.egg-info to /home/syqua/Desktop/ros2_ws/install/tipsy_turtle/lib/python3.8/site-packages/tipsy_turtle-0.0.0-py3.8.egg-info
+running install_scripts
+writing list of installed files to '/home/syqua/Desktop/ros2_ws/build/tipsy_turtle/install.log'

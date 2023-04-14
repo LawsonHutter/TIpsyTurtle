@@ -1,0 +1,18 @@
+[0.832s] Invoking command in '/home/syqua/Desktop/ros2_ws/build/tipsy_turtle': PYTHONPATH=/home/syqua/Desktop/ros2_ws/build/tipsy_turtle/prefix_override:/home/syqua/Desktop/ros2_ws/install/tipsy_turtle/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/syqua/Desktop/ros2_ws/build/tipsy_turtle/build --no-deps install_data
+[1.132s] running develop
+[1.291s] running egg_info
+[1.292s] writing tipsy_turtle.egg-info/PKG-INFO
+[1.292s] writing dependency_links to tipsy_turtle.egg-info/dependency_links.txt
+[1.292s] writing entry points to tipsy_turtle.egg-info/entry_points.txt
+[1.293s] writing requirements to tipsy_turtle.egg-info/requires.txt
+[1.293s] writing top-level names to tipsy_turtle.egg-info/top_level.txt
+[1.341s] reading manifest file 'tipsy_turtle.egg-info/SOURCES.txt'
+[1.342s] writing manifest file 'tipsy_turtle.egg-info/SOURCES.txt'
+[1.344s] running build_ext
+[1.345s] Creating /home/syqua/Desktop/ros2_ws/install/tipsy_turtle/lib/python3.8/site-packages/site.py
+[1.348s] Creating /home/syqua/Desktop/ros2_ws/install/tipsy_turtle/lib/python3.8/site-packages/tipsy-turtle.egg-link (link to .)
+[1.349s] Installing test_node script to /home/syqua/Desktop/ros2_ws/install/tipsy_turtle/lib/tipsy_turtle
+[1.350s] 
+[1.350s] Installed /home/syqua/Desktop/ros2_ws/build/tipsy_turtle
+[1.350s] running install_data
+[1.389s] Invoked command in '/home/syqua/Desktop/ros2_ws/build/tipsy_turtle' returned '0': PYTHONPATH=/home/syqua/Desktop/ros2_ws/build/tipsy_turtle/prefix_override:/home/syqua/Desktop/ros2_ws/install/tipsy_turtle/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/syqua/Desktop/ros2_ws/build/tipsy_turtle/build --no-deps install_data

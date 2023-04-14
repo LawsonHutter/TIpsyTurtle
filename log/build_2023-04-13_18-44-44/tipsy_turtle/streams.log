@@ -1,0 +1,24 @@
+[0.837s] Invoking command in '/home/syqua/Desktop/ros2_ws/src/tipsy_turtle': PYTHONPATH=/home/syqua/Desktop/ros2_ws/build/tipsy_turtle/prefix_override:/home/syqua/Desktop/ros2_ws/install/tipsy_turtle/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/tipsy_turtle build --build-base /home/syqua/Desktop/ros2_ws/build/tipsy_turtle/build install --record /home/syqua/Desktop/ros2_ws/build/tipsy_turtle/install.log --single-version-externally-managed
+[1.101s] running egg_info
+[1.102s] writing ../../build/tipsy_turtle/tipsy_turtle.egg-info/PKG-INFO
+[1.103s] writing dependency_links to ../../build/tipsy_turtle/tipsy_turtle.egg-info/dependency_links.txt
+[1.103s] writing entry points to ../../build/tipsy_turtle/tipsy_turtle.egg-info/entry_points.txt
+[1.103s] writing requirements to ../../build/tipsy_turtle/tipsy_turtle.egg-info/requires.txt
+[1.104s] writing top-level names to ../../build/tipsy_turtle/tipsy_turtle.egg-info/top_level.txt
+[1.156s] reading manifest file '../../build/tipsy_turtle/tipsy_turtle.egg-info/SOURCES.txt'
+[1.158s] writing manifest file '../../build/tipsy_turtle/tipsy_turtle.egg-info/SOURCES.txt'
+[1.158s] running build
+[1.158s] running build_py
+[1.159s] copying tipsy_turtle/my_first_node.py -> /home/syqua/Desktop/ros2_ws/build/tipsy_turtle/build/lib/tipsy_turtle
+[1.160s] running install
+[1.161s] running install_lib
+[1.163s] copying /home/syqua/Desktop/ros2_ws/build/tipsy_turtle/build/lib/tipsy_turtle/my_first_node.py -> /home/syqua/Desktop/ros2_ws/install/tipsy_turtle/lib/python3.8/site-packages/tipsy_turtle
+[1.164s] byte-compiling /home/syqua/Desktop/ros2_ws/install/tipsy_turtle/lib/python3.8/site-packages/tipsy_turtle/my_first_node.py to my_first_node.cpython-38.pyc
+[1.166s] running install_data
+[1.167s] running install_egg_info
+[1.169s] removing '/home/syqua/Desktop/ros2_ws/install/tipsy_turtle/lib/python3.8/site-packages/tipsy_turtle-0.0.0-py3.8.egg-info' (and everything under it)
+[1.171s] Copying ../../build/tipsy_turtle/tipsy_turtle.egg-info to /home/syqua/Desktop/ros2_ws/install/tipsy_turtle/lib/python3.8/site-packages/tipsy_turtle-0.0.0-py3.8.egg-info
+[1.174s] running install_scripts
+[1.196s] Installing test_node script to /home/syqua/Desktop/ros2_ws/install/tipsy_turtle/lib/tipsy_turtle
+[1.197s] writing list of installed files to '/home/syqua/Desktop/ros2_ws/build/tipsy_turtle/install.log'
+[1.236s] Invoked command in '/home/syqua/Desktop/ros2_ws/src/tipsy_turtle' returned '0': PYTHONPATH=/home/syqua/Desktop/ros2_ws/build/tipsy_turtle/prefix_override:/home/syqua/Desktop/ros2_ws/install/tipsy_turtle/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/tipsy_turtle build --build-base /home/syqua/Desktop/ros2_ws/build/tipsy_turtle/build install --record /home/syqua/Desktop/ros2_ws/build/tipsy_turtle/install.log --single-version-externally-managed

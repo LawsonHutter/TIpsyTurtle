@@ -1,0 +1,17 @@
+running develop
+running egg_info
+writing tipsy_turtle.egg-info/PKG-INFO
+writing dependency_links to tipsy_turtle.egg-info/dependency_links.txt
+writing entry points to tipsy_turtle.egg-info/entry_points.txt
+writing requirements to tipsy_turtle.egg-info/requires.txt
+writing top-level names to tipsy_turtle.egg-info/top_level.txt
+reading manifest file 'tipsy_turtle.egg-info/SOURCES.txt'
+writing manifest file 'tipsy_turtle.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/syqua/Desktop/ros2_ws/install/tipsy_turtle/lib/python3.8/site-packages/tipsy-turtle.egg-link (link to .)
+Installing draw_circle script to /home/syqua/Desktop/ros2_ws/install/tipsy_turtle/lib/tipsy_turtle
+Installing pose_sub script to /home/syqua/Desktop/ros2_ws/install/tipsy_turtle/lib/tipsy_turtle
+Installing test_node script to /home/syqua/Desktop/ros2_ws/install/tipsy_turtle/lib/tipsy_turtle
+
+Installed /home/syqua/Desktop/ros2_ws/build/tipsy_turtle
+running install_data
