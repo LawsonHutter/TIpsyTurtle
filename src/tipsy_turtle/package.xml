@@ -8,12 +8,14 @@
   <license>TODO: License declaration</license>
 
   <depend>rclpy</depend>
+  <depend>irobot_create_msgs</depend>
   <depend>geometry_msgs</depend>
   <depend>turtlesim</depend>
   <exec_depend>nav_msgs</exec_depend>
   <depend>turtlebot4_navigation</depend>
   <depend>nav2_simple_commander</depend>
   <depend>nav2_robot</depend>
+  <depend>RPi.GPIO</depend>
 
 
   <test_depend>ament_copyright</test_depend>

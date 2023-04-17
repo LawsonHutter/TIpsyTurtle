@@ -1,105 +1,95 @@
 #!/usr/bin/env python3
+
+# Packages and Libraries
 import rclpy
+import os
 import time
 from rclpy.node import Node
 from geometry_msgs.msg import PoseStamped
 from nav2_simple_commander.robot_navigator import BasicNavigator, TaskResult
 from rclpy.duration import Duration
+from nav2_msgs.srv import LoadMap
+from nav2_msgs.action import NavigateToPose
+from turtlebot4_navigation.turtlebot4_navigator import TurtleBot4Directions, TurtleBot4Navigator
+
+# Other files
+import gpio_publisher
+
 
 # Turtle Controller Node
 class TurtleController(Node):
+    # Inherit Node
     def __init__(self):
-        # Inherit Node
-        super().__init__("turtle_controll0er")
-
-        """
-            Put code here:
-        """
-
+        # Unused Node Shell
+        self.get_logger().info('Test')
 
 def main():
+
+    # Initializations
     rclpy.init()
+    node = gpio_publisher()
 
-    navigator = BasicNavigator()
+    frequency = 50 # 50Hz
+    period = 1/frequency # Period in seconds
+    half_period = period/2 # Half period in seconds
 
-    # Set our demo's initial pose
-    initial_pose = PoseStamped()
-    initial_pose.header.frame_id = 'map'
-    initial_pose.header.stamp = navigator.get_clock().now().to_msg()
-    initial_pose.pose.position.x = 3.45
-    initial_pose.pose.position.y = 2.15
-    initial_pose.pose.orientation.z = 1.0
-    initial_pose.pose.orientation.w = 0.0
+    while (1):
+        node.send_command("2:HIGH")
+        time.sleep(half_period)
+        node.send_command("2:LOW")
+        time.sleep(half_period)
+
+    navigator = TurtleBot4Navigator()
+
+    # Start on dock
+    if not navigator.getDockedStatus():
+        navigator.info('Docking before intialising pose')
+        navigator.dock()
+
+    # Set initial pose
+    initial_pose = navigator.getPoseStamped([0.0, 0.0], TurtleBot4Directions.NORTH)
     navigator.setInitialPose(initial_pose)
 
-    # Activate navigation, if not autostarted. This should be called after setInitialPose()
-    # or this will initialize at the origin of the map and update the costmap with bogus readings.
-    # If autostart, you should `waitUntilNav2Active()` instead.
-    # navigator.lifecycleStartup()
-
-    # Wait for navigation to fully activate, since autostarting nav2
+    # Wait for Nav2
     navigator.waitUntilNav2Active()
 
-    # If desired, you can change or load the map as well
-    # navigator.changeMap('/path/to/map.yaml')
+    # Set goal points
+    goal_fridge = navigator.getPoseStamped([-5.301235675811768, 1.270430326461792], TurtleBot4Directions.EAST)
+    goal_couch = navigator.getPoseStamped([-1.2631111145019531, 1.8153612613677979], TurtleBot4Directions.EAST)
 
-    # You may use the navigator to clear or obtain costmaps
-    # navigator.clearAllCostmaps()  # also have clearLocalCostmap() and clearGlobalCostmap()
-    # global_costmap = navigator.getGlobalCostmap()
-    # local_costmap = navigator.getLocalCostmap()
 
-    # Go to our demos first goal pose
-    goal_pose = PoseStamped()
-    goal_pose.header.frame_id = 'map'
-    goal_pose.header.stamp = navigator.get_clock().now().to_msg()
-    goal_pose.pose.position.x = -2.0
-    goal_pose.pose.position.y = -0.5
-    goal_pose.pose.orientation.w = 1.0
+    # Undock
+    navigator.undock()
 
-    # sanity check a valid path exists
-    # path = navigator.getPath(initial_pose, goal_pose)
+    # Go to each goal pose
+    navigator.startToPose(goal_fridge)
 
-    navigator.goToPose(goal_pose)
-
-    i = 0
-    while not navigator.isTaskComplete():
-        ################################################
-        #
-        # Implement some code here for your application!
-        #
-        ################################################
-
-        # Do something with the feedback
-        i = i + 1
-        feedback = navigator.getFeedback()
-        if feedback and i % 5 == 0:
-            print('Estimated time of arrival: ' + '{0:.0f}'.format(
-                  Duration.from_msg(feedback.estimated_time_remaining).nanoseconds / 1e9)
-                  + ' seconds.')
-
-            # Some navigation timeout to demo cancellation
-            if Duration.from_msg(feedback.navigation_time) > Duration(seconds=600.0):
-                navigator.cancelTask()
-
-            # Some navigation request change to demo preemption
-            if Duration.from_msg(feedback.navigation_time) > Duration(seconds=18.0):
-                goal_pose.pose.position.x = -3.0
-                navigator.goToPose(goal_pose)
-
-    # Do something depending on the return code
-    result = navigator.getResult()
-    if result == TaskResult.SUCCEEDED:
-        print('Goal succeeded!')
-    elif result == TaskResult.CANCELED:
-        print('Goal was canceled!')
-    elif result == TaskResult.FAILED:
-        print('Goal failed!')
-    else:
-        print('Goal has an invalid return status!')
-
-    navigator.lifecycleShutdown()
-
-    exit(0)
+    rclpy.shutdown()
 
 if __name__ == '__main__':
     main()
+
+"""
+
+header:
+  stamp:
+    sec: 1681694956
+    nanosec: 140790603
+  frame_id: map
+point:  Fridge
+  x: -5.301235675811768
+  y: 1.270430326461792
+  z: -0.005340576171875
+---
+header:
+  stamp:
+    sec: 1681694966
+    nanosec: 418180486
+  frame_id: map
+point:  Bean bag
+  x: -1.2631111145019531
+  y: 1.8153612613677979
+  z: -0.005340576171875
+---
+
+"""

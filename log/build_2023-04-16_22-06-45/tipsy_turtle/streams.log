@@ -1,0 +1,21 @@
+[0.822s] Invoking command in '/home/syqua/Desktop/ros2_ws/build/tipsy_turtle': PYTHONPATH=/home/syqua/Desktop/ros2_ws/build/tipsy_turtle/prefix_override:/home/syqua/Desktop/ros2_ws/install/tipsy_turtle/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/syqua/Desktop/ros2_ws/build/tipsy_turtle/build --no-deps install_data
+[1.126s] running develop
+[1.307s] running egg_info
+[1.307s] writing tipsy_turtle.egg-info/PKG-INFO
+[1.307s] writing dependency_links to tipsy_turtle.egg-info/dependency_links.txt
+[1.307s] writing entry points to tipsy_turtle.egg-info/entry_points.txt
+[1.307s] writing requirements to tipsy_turtle.egg-info/requires.txt
+[1.307s] writing top-level names to tipsy_turtle.egg-info/top_level.txt
+[1.354s] reading manifest file 'tipsy_turtle.egg-info/SOURCES.txt'
+[1.355s] writing manifest file 'tipsy_turtle.egg-info/SOURCES.txt'
+[1.358s] running build_ext
+[1.358s] Creating /home/syqua/Desktop/ros2_ws/install/tipsy_turtle/lib/python3.8/site-packages/tipsy-turtle.egg-link (link to .)
+[1.359s] Installing draw_circle script to /home/syqua/Desktop/ros2_ws/install/tipsy_turtle/lib/tipsy_turtle
+[1.359s] Installing main script to /home/syqua/Desktop/ros2_ws/install/tipsy_turtle/lib/tipsy_turtle
+[1.359s] Installing pose_sub script to /home/syqua/Desktop/ros2_ws/install/tipsy_turtle/lib/tipsy_turtle
+[1.360s] Installing test_node script to /home/syqua/Desktop/ros2_ws/install/tipsy_turtle/lib/tipsy_turtle
+[1.360s] 
+[1.360s] Installed /home/syqua/Desktop/ros2_ws/build/tipsy_turtle
+[1.360s] running install_data
+[1.360s] copying package.xml -> /home/syqua/Desktop/ros2_ws/install/tipsy_turtle/share/tipsy_turtle
+[1.399s] Invoked command in '/home/syqua/Desktop/ros2_ws/build/tipsy_turtle' returned '0': PYTHONPATH=/home/syqua/Desktop/ros2_ws/build/tipsy_turtle/prefix_override:/home/syqua/Desktop/ros2_ws/install/tipsy_turtle/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/syqua/Desktop/ros2_ws/build/tipsy_turtle/build --no-deps install_data

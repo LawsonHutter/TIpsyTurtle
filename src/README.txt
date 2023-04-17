@@ -53,3 +53,8 @@ LAUNCH FILE
 
 git config user.email "lawsonhutter@ufl.edu"
 git config user.name "lawsonhutter"
+
+GET MAP OFF TURTLE 
+    scp ubuntu@192.168.1.26:/lhutt_apt.yaml /home/syqua/Desktop/ros2_ws/src/tipsy_turtle/maps
+
+    scp k_mcg_apt.yaml ubuntu@192.168.0.234:~/turtlebot4_ws/src/my_nav/maps
