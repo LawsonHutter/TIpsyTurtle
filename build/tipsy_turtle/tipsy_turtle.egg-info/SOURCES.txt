@@ -10,6 +10,7 @@ setup.py
 ../../build/tipsy_turtle/tipsy_turtle.egg-info/zip-safe
 resource/tipsy_turtle
 tipsy_turtle/__init__.py
+tipsy_turtle/gpio_publisher.py
 tipsy_turtle/my_first_node.py
 tipsy_turtle/pose_subscriber.py
 tipsy_turtle/sim_circle.py
