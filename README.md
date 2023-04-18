@@ -14,7 +14,17 @@
 * Wait for it to connect both the RPi and Create3 (Will make a happy sound)
 * Open 2 SSH terminals to the RPi
 * On the first one:
-** ros2 launch turtlebot4_navigation nav_bringup.launch.py slam:=off localization:=true map:=<YourMap>.yaml
+  * ros2 launch turtlebot4_navigation nav_bringup.launch.py slam:=off localization:=true map:=<YourMap>.yaml
+  * This is hella buggy... wait like 3 minues until it is polling for an initial position
 * On the Second One:
-** cd turtlebot4_ws
-** source install/setup.bash
+  * cd turtlebot4_ws
+  * source install/setup.bash
+  * ros2 run gpio_sub gpio_sub_node
+    * NOTE: look at this code before adding your parts in:
+    * turtlebot4_ws/src/gpio_sub/gpio_sub/gpio_subscriber.py (Use vscode ssh extension)
+* On your PC with this code cloned,
+  * source ~/.bashrc
+  * ros2 run tipsy_turtle main
+  * Done!
+  
+ 
