@@ -57,4 +57,12 @@ git config user.name "lawsonhutter"
 GET MAP OFF TURTLE 
     scp ubuntu@192.168.1.26:/lhutt_apt.yaml /home/syqua/Desktop/ros2_ws/src/tipsy_turtle/maps
 
-    scp k_mcg_apt.yaml ubuntu@192.168.0.234:~/turtlebot4_ws/src/my_nav/maps
+    scp NEB_CL.yaml ubuntu@172.20.10.4:~/turtlebot4_ws/src/my_nav/maps
+
+
+    ros2 service call /slam_toolbox/save_map slam_toolbox/srv/SaveMap "name:
+  data: 'NEB_CL'"
+
+  ros2 launch turtlebot4_navigation nav_bringup.launch.py slam:=off localization:=true map:=k_mcg_apt.yaml
+
+sudo apt-get install ros-galactic-tf2-ros
